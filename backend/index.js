@@ -13,17 +13,17 @@ app.use(express.json());
 // Middleware for handling CORS Policy
 // Option 1: Allow all origins with default of cors(*)
 app.use(cors());
-// Option 2: Allow custom origins
-app.use(
-    cors({
-        origin: 'http://localhost:3001',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-);
+// // Option 2: Allow custom origins
+// app.use(
+//     cors({
+//         origin: 'http://localhost:3001',
+//         methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// );
 
 app.get('/', (req, res) => {
-    console.log(req);
+    // console.log(req);
     return res.status(234).send('Welcome to MERN stack tutorial');
 });
 
